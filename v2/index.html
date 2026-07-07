@@ -211,8 +211,9 @@ header.nav.scrolled{background:rgba(244,247,251,.8);backdrop-filter:saturate(180
 /* stacked fallback (mobile + no-pin + reduced motion) */
 @media(max-width:860px){
   .way-inner{grid-template-columns:1fr;gap:18px;padding:0 22px}
-  .way-title h2{max-width:none;font-size:clamp(25px,6.6vw,34px)}
-  .way-steps{flex-direction:row;flex-wrap:wrap;gap:6px 16px;margin-top:14px}
+  .way-title{text-align:center;max-width:72vw;margin-left:auto;margin-right:auto}
+  .way-title h2{max-width:none;font-size:clamp(24px,6.2vw,32px)}
+  .way-steps{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:6px 16px;margin-top:14px}
   .way-steps li{padding:4px 0;font-size:15px;gap:7px}
   .way-steps li .idx{font-size:11px;min-width:16px}
   .way-steps li.on{transform:none}
@@ -739,7 +740,7 @@ window.addEventListener('load', function(){
   var mm = gsap.matchMedia();
   mm.add({ desk:'(min-width: 861px)', mob:'(max-width: 860px)' }, function(ctx){
     var isMob = ctx.conditions.mob;
-    INTRO_SCALE = isMob ? 1.3 : 1.62;   /* smaller enlarge on narrow screens so it never overflows */
+    INTRO_SCALE = isMob ? 1.2 : 1.62;   /* smaller enlarge on narrow screens so it never overflows */
     gsap.set(stepsBox, {autoAlpha:0, y:18});
     setActive(-1);   /* intro: big centred headline only, no card/step yet */
 
