@@ -210,12 +210,17 @@ header.nav.scrolled{background:rgba(244,247,251,.8);backdrop-filter:saturate(180
 .way-card .tag{margin-top:auto;align-self:flex-start;background:var(--brand-sky);color:#052036;font-weight:700;font-size:12px;letter-spacing:.06em;padding:9px 18px;border-radius:980px;text-transform:uppercase}
 /* stacked fallback (mobile + no-pin + reduced motion) */
 @media(max-width:860px){
-  .way-stage{min-height:0}
-  .way-inner{grid-template-columns:1fr;gap:22px;padding:66px 24px}
-  .way-title h2{max-width:none}
-  .way-steps{display:none}
-  .way-right{min-height:0;display:grid;gap:16px}
-  .way-card{position:relative;inset:auto;opacity:1;visibility:visible;transform:none;min-height:auto;padding:32px}
+  .way-inner{grid-template-columns:1fr;gap:18px;padding:0 22px}
+  .way-title h2{max-width:none;font-size:clamp(25px,6.6vw,34px)}
+  .way-steps{flex-direction:row;flex-wrap:wrap;gap:6px 16px;margin-top:14px}
+  .way-steps li{padding:4px 0;font-size:15px;gap:7px}
+  .way-steps li .idx{font-size:11px;min-width:16px}
+  .way-steps li.on{transform:none}
+  .way-right{min-height:56vh;display:block}
+  .way-card{padding:28px}
+  .way-card .num{font-size:52px}
+  .way-card h3{font-size:clamp(24px,6vw,30px);margin:16px 0 12px}
+  .way-card p{font-size:15px}
 }
 .way.no-pin .way-stage{min-height:0}
 .way.no-pin .way-inner{grid-template-columns:1fr;gap:22px}
@@ -730,14 +735,17 @@ window.addEventListener('load', function(){
     railDots.forEach(function(d,n){ d.classList.toggle('on', n===i); });
   }
 
+  ScrollTrigger.config({ ignoreMobileResize: true });   /* avoid jump on mobile URL-bar show/hide */
   var mm = gsap.matchMedia();
-  mm.add('(min-width: 861px)', function(){
+  mm.add({ desk:'(min-width: 861px)', mob:'(max-width: 860px)' }, function(ctx){
+    var isMob = ctx.conditions.mob;
+    INTRO_SCALE = isMob ? 1.3 : 1.62;   /* smaller enlarge on narrow screens so it never overflows */
     gsap.set(stepsBox, {autoAlpha:0, y:18});
     setActive(-1);   /* intro: big centred headline only, no card/step yet */
 
     var tl = gsap.timeline({
       scrollTrigger:{
-        trigger: wayEl, start:'top top', end:'+=460%', pin: stage, pinSpacing:true,
+        trigger: wayEl, start:'top top', end: (isMob ? '+=340%' : '+=460%'), pin: stage, pinSpacing:true,
         scrub: 0.5, invalidateOnRefresh:true,
         onUpdate:function(self){
           var p = self.progress;
