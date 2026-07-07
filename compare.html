@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b1b33">
+<title>Mac &amp; More Solutions · Website Concepts</title>
+<meta name="description" content="Two website concepts for Mac & More Solutions, Apple Authorised Reseller in East Africa. Compare the bold dark keynote direction and the light editorial direction, live.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Mac & More Solutions · Website Concepts">
+<meta property="og:description" content="Two live website directions for Mac & More Solutions. Take a look and pick your favourite.">
+<meta property="og:image" content="v2/assets/og-image.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23003a7a'/%3E%3Ctext x='50' y='70' font-size='60' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-weight='800'%3EM%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#eef2f8;--ink:#0a1a33;--ink-soft:#3f5069;--muted:#6b7a90;
+  --line:#e0e7f1;--brand:#0a6bb0;--brand-deep:#00306e;--brand-sky:#49a8dc;
+  --grad:linear-gradient(115deg,#00306e,#0a6bb0 55%,#49a8dc);
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --shadow:0 1px 2px rgba(10,26,51,.05),0 20px 50px -24px rgba(10,26,51,.28);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.55;
+  background-image:radial-gradient(60% 40% at 50% -8%,rgba(73,168,220,.20),transparent 70%),radial-gradient(40% 30% at 90% 0,rgba(0,48,110,.12),transparent 70%);min-height:100vh}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+
+header{padding:26px 0}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:11px}
+.logo img{height:40px;width:auto}
+.logo b{font-size:17px;font-weight:700;letter-spacing:-.02em}
+.logo b small{display:block;font-size:10px;font-weight:500;color:var(--muted);letter-spacing:.02em;margin-top:-2px}
+.top .meta{font-size:13px;color:var(--muted);text-align:right}
+
+.hero{text-align:center;padding:30px 0 40px}
+.chip{display:inline-block;font-size:12px;font-weight:650;letter-spacing:.12em;text-transform:uppercase;color:var(--brand);margin-bottom:16px}
+.hero h1{font-size:clamp(30px,4.6vw,50px);font-weight:700;letter-spacing:-.03em;max-width:20ch;margin:0 auto 16px}
+.hero h1 .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{font-size:clamp(16px,2vw,19px);color:var(--ink-soft);max-width:60ch;margin:0 auto}
+
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;padding:14px 0 60px}
+@media(max-width:900px){.grid{grid-template-columns:1fr;gap:34px}}
+.card{background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);padding:14px 14px 26px;display:flex;flex-direction:column}
+.card .head{padding:14px 14px 6px}
+.badge{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--brand-deep);margin-bottom:12px}
+.badge .dot{width:8px;height:8px;border-radius:50%;background:var(--grad)}
+.card h2{font-size:26px;letter-spacing:-.02em;margin-bottom:6px}
+.card .lede{font-size:15px;color:var(--ink-soft);margin-bottom:2px}
+
+/* browser preview */
+.browser{margin:16px 8px 0;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 12px 30px -18px rgba(10,26,51,.4)}
+.bar{height:36px;background:#f1f4f9;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:7px;padding:0 13px}
+.bar i{width:11px;height:11px;border-radius:50%;background:#d3dbe6;display:block}
+.bar .url{margin-left:10px;flex:1;height:20px;background:#fff;border:1px solid var(--line);border-radius:6px;font-size:11px;color:var(--muted);display:flex;align-items:center;padding:0 10px;overflow:hidden;white-space:nowrap}
+.screen{position:relative;overflow:hidden;background:#0a0a0f;transition:height .2s}
+.screen iframe{position:absolute;top:0;left:0;width:1280px;border:0;transform-origin:0 0;pointer-events:none;background:#fff}
+.screen .cover{position:absolute;inset:0;z-index:2;display:flex;align-items:flex-end;justify-content:center;padding-bottom:16px;opacity:0;transition:opacity .25s;background:linear-gradient(to top,rgba(0,20,50,.35),transparent 45%)}
+.screen:hover .cover{opacity:1}
+.screen .cover span{background:#fff;color:var(--brand-deep);font-weight:600;font-size:13.5px;padding:9px 18px;border-radius:980px;box-shadow:0 6px 18px rgba(0,0,0,.2)}
+
+.feat{list-style:none;padding:20px 14px 0;display:grid;grid-template-columns:1fr 1fr;gap:10px 14px}
+@media(max-width:480px){.feat{grid-template-columns:1fr}}
+.feat li{display:flex;gap:9px;align-items:flex-start;font-size:14px;color:var(--ink)}
+.feat li svg{flex:0 0 auto;width:17px;height:17px;color:var(--brand);margin-top:2px}
+.actions{display:flex;gap:10px;padding:22px 14px 0;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;padding:12px 22px;border-radius:980px;transition:transform .2s,box-shadow .2s,background .2s,color .2s;cursor:pointer;border:0}
+.btn-primary{background:var(--brand-deep);color:#fff;box-shadow:0 10px 24px -10px rgba(0,48,110,.55)}
+.btn-primary:hover{transform:translateY(-2px);background:#013a86}
+.btn-ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.btn-ghost:hover{border-color:var(--brand);color:var(--brand);transform:translateY(-2px)}
+.btn svg{width:15px;height:15px}
+
+.note{text-align:center;padding:8px 0 60px}
+.note .box{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:34px;max-width:760px;margin:0 auto}
+.note h3{font-size:20px;margin-bottom:10px;letter-spacing:-.02em}
+.note p{font-size:15px;color:var(--ink-soft);max-width:60ch;margin:0 auto}
+.note .row{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-top:20px;font-size:14px;color:var(--muted)}
+.note .row span{display:flex;align-items:center;gap:7px}
+.note .row svg{width:16px;height:16px;color:var(--brand)}
+footer{text-align:center;padding:20px 0 40px;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap top">
+    <a class="logo" href="#">
+      <img src="assets/mac-more-logo.png" alt="Mac & More Solutions logo">
+      <b>Mac&nbsp;&amp;&nbsp;More<small>Apple Authorised · Since 2002</small></b>
+    </a>
+    <div class="meta">Website concepts · Private preview<br>Prepared for review</div>
+  </div>
+</header>
+
+<section class="hero wrap">
+  <span class="chip">Two directions, one brand</span>
+  <h1>Pick the look for the new <span class="g">Mac &amp; More Solutions</span> website.</h1>
+  <p>Both concepts share the exact same content, brand and SEO foundation. They differ only in art direction. Hover a preview to open it live, explore both, then tell me which way to take it.</p>
+</section>
+
+<section class="wrap">
+  <div class="grid">
+
+    <!-- ITERATION 1 -->
+    <article class="card">
+      <div class="head">
+        <span class="badge"><span class="dot"></span>Iteration 01 · The Keynote</span>
+        <h2>Bold &amp; cinematic</h2>
+        <p class="lede">A dramatic dark canvas that makes the products glow, with an Apple-keynote feel and oversized gradient type.</p>
+      </div>
+      <div class="browser">
+        <div class="bar"><i></i><i></i><i></i><div class="url">mac-more.co.ke</div></div>
+        <div class="screen" data-src="index.html">
+          <iframe src="index.html" title="Iteration 1 preview" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+          <a class="cover" href="index.html" target="_blank" rel="noopener"><span>Open full site&nbsp;↗</span></a>
+        </div>
+      </div>
+      <ul class="feat">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Dark, immersive canvas</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Oversized gradient type</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>High-drama product focus</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Makes a premium statement</li>
+      </ul>
+      <div class="actions">
+        <a class="btn btn-primary" href="index.html" target="_blank" rel="noopener">Open full site
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- ITERATION 2 -->
+    <article class="card">
+      <div class="head">
+        <span class="badge"><span class="dot"></span>Iteration 02 · The Editorial</span>
+        <h2>Light &amp; modern</h2>
+        <p class="lede">A bright, airy layout inspired by award-winning product sites, with real Apple photography and a calm, trustworthy tone.</p>
+      </div>
+      <div class="browser">
+        <div class="bar"><i></i><i></i><i></i><div class="url">mac-more.co.ke</div></div>
+        <div class="screen" data-src="v2/index.html">
+          <iframe src="v2/index.html" title="Iteration 2 preview" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+          <a class="cover" href="v2/index.html" target="_blank" rel="noopener"><span>Open full site&nbsp;↗</span></a>
+        </div>
+      </div>
+      <ul class="feat">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Bright editorial layout</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Real Apple product imagery</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Animated FAQ &amp; feature rows</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Calm, trustworthy, modern</li>
+      </ul>
+      <div class="actions">
+        <a class="btn btn-primary" href="v2/index.html" target="_blank" rel="noopener">Open full site
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="note wrap">
+  <div class="box">
+    <h3>Same substance. Two personalities.</h3>
+    <p>Whichever you choose, you get identical genuine-Apple copy, three-branch local SEO, structured data for Google, click-to-call and WhatsApp, and a page that loads in well under a second.</p>
+    <div class="row">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Fully responsive</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>SEO &amp; schema built in</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Instant load</span>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Mac &amp; More Solutions Limited · Concept preview</footer>
+
+<script>
+function fit(){
+  document.querySelectorAll('.screen').forEach(function(s){
+    var w=s.clientWidth, scale=w/1280, f=s.querySelector('iframe');
+    f.style.transform='scale('+scale+')';
+    f.style.height=(Math.min(1180, 620/scale))+'px';   /* show a tall slice of the page */
+    s.style.height=(f.offsetHeight*scale)+'px';
+  });
+}
+addEventListener('load',fit); addEventListener('resize',fit); setTimeout(fit,400); setTimeout(fit,1500);
+</script>
+</body>
+</html>
